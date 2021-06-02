@@ -15,8 +15,10 @@ function handleServer(req, res) {
             email: "guestcaredominos@jublfood.com",
         });
         res.end();
+    } else {
+        res.writeHead(404);
+        res.end();
     }
-    res.writeHead(404);
 }
 
 module.exports = httpServer;
